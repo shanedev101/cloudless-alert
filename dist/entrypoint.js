@@ -26186,6 +26186,7 @@ async function run() {
     const color = parseInt(core.getInput("color"), 10);
     const webhook = core.getInput("webhook");
     const envName = core.getInput("env_name");
+    const now = (/* @__PURE__ */ new Date()).toISOString().replace("T", " ").replace(/\..+/, " UTC");
     const payload = {
       username: "Cloudless Alert",
       embeds: [
@@ -26194,9 +26195,8 @@ async function run() {
           description: message,
           color,
           footer: {
-            text: `Environment: ${envName}`
-          },
-          timestamp: (/* @__PURE__ */ new Date()).toISOString()
+            text: `Environment: ${envName} | Time: ${now}`
+          }
         }
       ]
     };

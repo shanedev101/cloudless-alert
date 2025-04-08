@@ -4,7 +4,8 @@
   "description": "A reusable GitHub Action to send notifications to multiple channels (e.g. Discord)",
   "main": "dist/entrypoint.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "bundle": "node build.js"
   },
   "author": "ShaneDev101 <dinhsang.str@gmail.com>",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "esbuild": "^0.25.2",
     "typescript": "^5.4.0"
   }
 }
