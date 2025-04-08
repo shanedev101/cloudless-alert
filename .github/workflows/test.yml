@@ -1,0 +1,19 @@
+name: Test Notification
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Notify Discord
+        uses: ./
+        with:
+          status: '🚀 Test Alert'
+          message: 'This is a test message from cloudless-alert.'
+          color: '16776960'
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          env_name: 'test'

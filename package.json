@@ -1,0 +1,20 @@
+{
+  "name": "cloudless-alert",
+  "version": "1.0.0",
+  "description": "A reusable GitHub Action to send notifications to multiple channels (e.g. Discord)",
+  "main": "dist/entrypoint.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "ShaneDev101 <dinhsang.str@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@types/node": "^22.14.0",
+    "axios": "^1.6.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

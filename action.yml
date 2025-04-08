@@ -1,0 +1,26 @@
+name: Cloudless Alert
+description: Send notifications from GitHub Actions to external services (e.g., Discord) without needing cloud event infrastructure.
+author: Shane
+
+inputs:
+  status:
+    description: Status message to display (e.g., ✅ Success)
+    required: true
+  message:
+    description: Main message body
+    required: true
+  color:
+    description: Embed color (in decimal)
+    required: false
+    default: '3447003'
+  webhook:
+    description: Discord webhook URL
+    required: true
+  env_name:
+    description: Environment name (e.g., dev, prod)
+    required: false
+    default: 'dev'
+
+runs:
+  using: 'node20'
+  main: 'dist/entrypoint.js'
