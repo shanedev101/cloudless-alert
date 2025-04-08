@@ -24,3 +24,7 @@ inputs:
 runs:
   using: 'node20'
   main: 'dist/entrypoint.js'
+
+branding:
+  icon: 'cloud-lightning'
+  color: 'gray-dark'
